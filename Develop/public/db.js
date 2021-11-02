@@ -20,10 +20,10 @@ request.onupgradeneeded = function (e) {
 
 
 request.onerror = function (error) {
-    console.log("Wow" `${error.target.errorcode}`)
+    console.log(`"Wow" ${error.target.errorcode}`)
 };
 
-let checkdatabase = () => {
+function checkdatabase () {
     console.log("DB invoked")
     let transaction = db.transaction(["BudgetStore"], readwrite);
     const store = transaction.objectStore("BudgetStore");
